@@ -6,7 +6,7 @@
 
 [![Live Demo](https://img.shields.io/badge/LIVE_DEMO-1a1a1a?style=for-the-badge&logoColor=f0bfb2&logo=github)](https://vultur.cc)
 [![MIT License](https://img.shields.io/badge/MIT-654c70?style=for-the-badge)](LICENSE)
-[![Netlify Status](https://img.shields.io/badge/NETLIFY-a85d8b?style=for-the-badge&logo=netlify&logoColor=white)](https://vultur.cc)
+[![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-a85d8b?style=for-the-badge&logo=github&logoColor=white)](https://vultur.cc)
 
 **Educational vulture encyclopedia with pixelated retro style**
 
