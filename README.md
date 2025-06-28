@@ -22,7 +22,7 @@
 
 <div align="center">
 
-<img src="assets/vltrs/tk.png" alt="Turkey Vulture" width="80">
+<img src="assets/vltrs/tv.png" alt="Turkey Vulture" width="80">
 
 *Interactive vulture cards with detailed information*
 
@@ -30,7 +30,7 @@
 
 *Special facts from Professor Vulture*
 
-<img src="assets/vltrs/kg.png" alt="King Vulture" width="80">
+<img src="assets/vltrs/kv.png" alt="King Vulture" width="80">
 
 *Beautiful pixel art illustrations*
 
