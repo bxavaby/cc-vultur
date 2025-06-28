@@ -57,6 +57,8 @@ Explore vultures through an interactive grid. Click on any vulture to see detail
 ![Condors](https://img.shields.io/badge/Condors-654c70?style=for-the-badge)
 ![Endangered](https://img.shields.io/badge/Conservation_Status-f0bfb2?style=for-the-badge)
 
+---
+
 **MIT License © 2025 bxavaby**
 
 </div>
