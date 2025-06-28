@@ -40,7 +40,6 @@
 
 ## Features
 
-![Pixel Art Design](https://img.shields.io/badge/Pixel_Art_Design-1a1a1a?style=for-the-badge&logoColor=f0bfb2)
 ![Educational Content](https://img.shields.io/badge/Educational_Content-1a1a1a?style=for-the-badge&logoColor=f0bfb2)
 ![Mobile Friendly](https://img.shields.io/badge/Mobile_Friendly-1a1a1a?style=for-the-badge&logoColor=f0bfb2)
 ![Interactive Cards](https://img.shields.io/badge/Interactive_Cards-1a1a1a?style=for-the-badge&logoColor=f0bfb2)
