@@ -1,0 +1,20 @@
+:root {
+    /* High Heavens Palette by mirrutatep */
+    --color-text: #fcf1df;
+    --color-accent: #f0bfb2;
+    --color-secondary: #db80ac;
+    --color-accent2: #a85d8b;
+    --color-background: #654c70;
+
+    /* utility colors */
+    --color-overlay: rgba(
+        101,
+        76,
+        112,
+        0.7
+    ); /* Background with opacity for overlay */
+    --color-hover-highlight: #f0bfb2;
+    --color-shadow: rgba(0, 0, 0, 0.2);
+    --border-radius: 8px;
+    --transition-speed: 0.3s;
+}

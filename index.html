@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Creature Compendium - Vultures</title>
+        <link rel="stylesheet" href="/styles/themes.css" />
+        <link rel="stylesheet" href="/styles/main.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=VT323&family=Press+Start+2P&display=swap"
+            rel="stylesheet"
+        />
+        <meta
+            name="description"
+            content="An educational vulture encyclopedia showcasing New World and Old World vultures with detailed information and fascinating facts."
+        />
+        <meta
+            name="keywords"
+            content="vultures, birds of prey, scavengers, ornithology, birds"
+        />
+
+        <link
+            rel="icon"
+            type="image/png"
+            href="/assets/fi/favicon-96x96.png"
+            sizes="96x96"
+        />
+        <link rel="icon" type="image/svg+xml" href="/assets/fi/favicon.svg" />
+        <link rel="shortcut icon" href="/assets/fi/favicon.ico" />
+        <link
+            rel="apple-touch-icon"
+            sizes="180x180"
+            href="/assets/fi/apple-touch-icon.png"
+        />
+        <meta name="apple-mobile-web-app-title" content="cc-vltr" />
+        <link rel="manifest" href="/assets/fi/site.webmanifest" />
+    </head>
+    <body>
+        <div class="audio-controls">
+            <button id="toggleAudio" aria-label="Toggle background music">
+                🔊
+            </button>
+            <audio id="bgMusic" loop></audio>
+        </div>
+
+        <header>
+            <h1 class="logo">CREATURE COMPENDIUM</h1>
+            <div class="subtitle">Part I - Vultures</div>
+        </header>
+
+        <main>
+            <section class="vulture-category">
+                <h2>New World Vultures</h2>
+                <div class="vulture-grid" id="new-world-vultures"></div>
+            </section>
+
+            <section class="vulture-category">
+                <h2>Old World Vultures</h2>
+                <div class="vulture-grid" id="old-world-vultures"></div>
+            </section>
+
+            <div class="vulture-detail-overlay" id="vultureDetail">
+                <div class="vulture-card">
+                    <button class="close-button">×</button>
+                    <div class="vulture-card-content"></div>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <div class="footer-content">
+                <p>
+                    Created with ❤️ by
+                    <a href="https://github.com/bxavaby" target="_blank"
+                        >bxavaby</a
+                    >
+                </p>
+                <p>
+                    Contact:
+                    <a href="mailto:bxavaby@protonmail.ch"
+                        >bxavaby@protonmail.ch</a
+                    >
+                </p>
+            </div>
+        </footer>
+
+        <script type="module" src="/scripts/main.js"></script>
+    </body>
+</html>

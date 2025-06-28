@@ -1,0 +1,903 @@
+
+ -> CREATURE COMPENDIUM - Vultures (Part I)
+
+ --> A single-page webapp about vultures: new and old world.
+
+
+- Approach: mobile-first??
+
+- Style: pixelart, pixelfonts, light tones (not too light, easy on the eyes)
+
+- Layout: centred logo on top -> subtitle below the logo reading
+          "Part I - Vultures" -> pixelart images of the vultures
+          in a grid layout, no borders, no shadowing, just the .png's
+          of each vulture (in pixelart), clickable -> footer, centred,
+          with a link to my github page and email
+
+- Need to:
+
+  1. Pick a palette for the site, from lospec, and define it in a themes.css,
+     so I can easily test different palettes;
+  2. Generate the 23 pixelart png's of the vultures, with specific poses and
+     characteristics, but all in the same chibi/cute style;
+  3. Pick a nice, clean and suitable wallpaper, maybe a simple grid or pattern
+     using the colours of the chosen palette;
+  4. Prepare the structure of the site, setup npm with vite for development;
+  5. Take crucial info from "The World of Vultures" for each vulture card, in
+     order to showcase important info about each vulture species;
+  6. Decide on the frameworks to use: tailwind or vanilla css; animation
+     libraries or vanilla js; etc;
+  7. Pick a nice, sweet track to play softly in the background of the site.
+
+--------------------------------------------------------------------------------
+
+- Vulture pixelart creation:
+
+  1. Use SORA or pixie.haus for the creation, with specifically crafted prompts;
+  2. A prompt per vulture species, key differences, but overall similar;
+  3. All the same size and with a transparent background;
+  4. May take the png's into asprite and add some touches, fixes, refinements;
+  5. More on each vulture section below.
+
+--------------------------------------------------------------------------------
+
+- Vulture layout grid:
+
+  1. Each vulture is clickable, kind of like a button/card;
+  2. On hover, highlight the vulture by making the png slightly bigger and
+     the rest of the vultures opaque or darkened (overlay);
+  3. On click, not sure about this yet, but perhaps hide the other vultures
+     and open a big, centred vulture-card of the vulture in question;
+  4. Tap outside or on a right-corner cross to leave the card and go back to
+     the grid view;
+
+Idea:
+Perhaps have two grids, one for New World Vultures and another for Old
+World Vutures with a slight gap in the middle - each grid will have a soft
+opacity and the category "Old/New World Vultures" on top, centred, covering
+the entire layout of the corresponding category -, remove opacity and show
+the vultures on hover, etc...
+
+--------------------------------------------------------------------------------
+
+- Vultures: New World (7) and OLd World (16)
+
+1. New World
+
+-> Black Vulture Coragyps atratus
+
+Spanish: Zopilote Negro, Aura Negro
+German: Rabengeier
+French: Urubu Noir
+aka: American Black Vulture, Gallinazo, Carrion Crow (obsolete)
+Taxonomy: Family Cathartidae
+Size: Length 26 in (56–74 cm); wingspan 58 in (150 cm); 3.0–5.0 lb
+(1400–2200 g)
+Estimated world population: >>10,000,000; increasing
+Movements: Largely sedentary except near latitudinal limits of its
+range; sometimes nomadic
+Social ecology: Individual nesting; communal roosting; individual
+and group food finding
+
+Special trait(s): Lacking a sniffing sense, but street-smart. Black Vultures
+                have a poor sense of smell and instead watch their Turkey
+                Vulture cousins to locate food. In the wild, they often soar
+                in search of carcasses and cleverly follow the “noses” of
+                other vultures, an unusual strategy that lets them find meals
+                their own nostrils would miss. Unlike most vultures, Black
+                Vultures can be surprisingly bold – occasionally pecking at
+                live newborn animals or feasting on unexpected food like
+                pumpkins and even picking ticks off capybaras. This
+                opportunistic streak sets them apart from more finicky
+                scavengers.
+
+Designed prompt: In a cute pixel-art design, a chibi Black Vulture could be
+                 shown happily munching on a pumpkin or holding a tick in
+                 its beak, emphasizing its “anything goes” appetite in an
+                 adorable way.
+
+
+-> Turkey Vulture Cathartes aura
+
+Spanish: Aura Cabeza Roja
+German: Truthhahngeier
+French: Urubu à Tête Rouge
+aka: Turkey Buzzard
+Taxonomy: Family Cathartidae
+Size: Length 25–32 in (64–81cm); wingspan 66–80 in (170–200 cm);
+3–5 lb (1400–2400 g)
+Estimated world population: 13,000,000; increasing
+Movements: Partial migrant; some migratory populations long-­
+distance, trans-equatorial and transcontinental
+Social ecology: Individual territorial nesting; communal roosting;
+individual and group food finding
+
+Special trait(s): Super-sniffer of the skies. Turkey Vultures are
+                  famous for their keen sense of smell, a rare talent
+                  in the bird world. They can detect the scent of decay
+                  from high above the forest canopy, allowing them to
+                  find hidden carcasses that other vultures (like the
+                  Black Vulture) would never notice. This super-olfactory
+                  ability gives them an edge in ecosystems – they often
+                  locate food first by smell, unlike most vultures that
+                  rely solely on eyesight.
+
+Designed prompt: To illustrate this in chibi pixel form, one could show
+                 a cute Turkey Vulture with exaggerated, sniffing nostrils.
+
+
+-> Lesser Yellow-headed Vulture Cathartes burrovianus
+
+Spanish: Aura Cabeza Amarilla
+German: Kleiner Gelbkopfgeier
+French: Urubu à Tête Jaune
+aka: Savanna Vulture
+Taxonomy: Family Cathartidae
+Size: Length 23–26 in (58–66 cm); wingspan 63 in (160 cm); 2 lb
+(950 g)
+Estimated world population: c. 100,000; possibly decreasing but
+likely stable, no indication of population increases anywhere in
+its range
+Movements: Largely sedentary; sometimes nomadic
+Social ecology: Individual nesting; communal roosting, sometimes
+with other species; largely individual food finding
+
+Special trait(s): Low-flying swamp glider. This smaller vulture is
+                  uniquely adapted to skim just above the ground in
+                  wetlands and savannas, riding small air currents
+                  only a meter or two high. By flying so low, it can
+                  surprise live prey like fish, frogs, or even
+                  snakes – an unusual hunting habit for a vulture.
+                  This ecological quirk lets it catch meals that other
+                  vultures, soaring high, would miss. It also sports a
+                  bright candy-colored head – living individuals have
+                  bare skin in sunny yellows and oranges with random
+                  blue patches. No two faces are quite alike, which might
+                  help these birds recognize each other. Compared to its
+                  well-known relative the Turkey Vulture, the Lesser
+                  Yellow-Headed Vulture is lighter and more agile, with a
+                  wider bill to gobble goodies quickly.
+
+Designed prompt: In pixel art, we could show a cute Lesser Yellow-Head gliding
+                 low over a marsh, maybe with a frog or fish in sight, to convey
+                 its skimming flight and hunting behavior.
+
+
+-> Greater Yellow-headed Vulture Cathartes melambrotus
+
+Spanish: Aura alas Anchas, Aura Silvatica
+German: Großer Gelbkopfgeier
+French: Grand Urubu
+aka: Forest Vulture
+Taxonomy: Family Cathartidae
+Size: Length 25–30 in (64–75 cm); wingspan 66 in (170 cm); 3.6 lb
+(1.65 kg)
+Estimated world population: 10,000–100,000; possibly decreasing
+but most likely stable, no indication of population increases any-
+where in its range
+Movements: Largely sedentary; some wandering
+Social ecology: Individual nesting; communal roosting, sometimes
+with C. aura; largely individual food finding
+
+Special trait(s): Shy forest shadow. This vulture sticks to steamy Amazonian
+                  forests, using its strong sense of smell and low soaring style
+                  to find carcasses under the canopy. It’s heftier than its
+                  lesser yellow-headed cousin, with broader wings for gliding
+                  over treetops. What really sets it apart is how it often partners
+                  with the King Vulture: the Greater Yellow-Headed Vulture will trail
+                  behind a King Vulture to a carcass, then let the “king” rip it open
+                  with his powerful bill. Once the tough hide is torn, the Greater
+                  Yellow-Head swoops in for its share. Unlike the smaller Turkey Vulture,
+                  it’s not easily bossed around by them – in fact, it can hold its own in
+                  a squabble with a Turkey Vulture due to its size.
+
+Designed prompt: For a chibi pixel character, picture a bashful-looking vulture peeking
+                 out from dense foliage, maybe with big “puppy eyes” and a cute sweat drop
+                 (anime-style) to show its patience in waiting.
+
+
+-> King Vulture Sarcoramphus papa
+
+Spanish: Zopilote Rey
+German: Königsgeier
+French: Sarcoramphie roi
+Taxonomy: Family Cathartidae
+Size: Length 28–32 in (71–81 cm); wingspan 70–79 in (180–200 cm);
+6.5–8.4 lb (3.0–3.8 kg)
+Estimated world population: <10,000; possibly decreasing
+Movements: Sedentary; sometimes nomadic
+Social ecology: Individual nesting: communal roosting; individual
+and group food finding
+
+Special trait(s): The carnival-colored carcass king. With a brilliantly multicolored head and
+                  neck that looks hand-painted in oranges, purples, and yellows, the King Vulture
+                  is arguably the most eye-catching vulture in the world. Its vivid, wrinkled face
+                  (complete with a comical fleshy crest on the bill) doesn’t just look cool – it
+                  likely helps King Vultures identify each other and perhaps signal their mood
+                  (zookeepers can tell individuals apart by the size of their face wattles!). Beyond
+                  looks, this species has a massive beak that functions like a can-opener on large
+                  carcasses. While King Vultures aren’t always the first at a dead animal, when they
+                  arrive they can tear open thick skin that smaller vultures (like Turkey or Black
+                  Vultures) struggle with. This benefits the whole clean-up crew, as it lets others
+                  access the juicy insides. No other New World vulture has such a combination of
+                  heavy bill and wild coloration.
+
+Designed prompt: A cute pixel King Vulture could be depicted wearing a little crown or cape.
+
+
+-> California Condor Gymnogyps californianus
+
+Spanish: Cóndor Californiano
+German: Kalifornischer Kondor
+French: Condor de Californie
+aka: California Vulture (obsolete)
+Taxonomy: Family Cathartidae
+Size: Length 46–53 in (117–134 cm); wingspan c. 106 in (270 cm);
+18–31 lb (8–14 kg)
+Estimated world population: <1000; increasing
+Movements: Sedentary; sometimes nomadic
+Social ecology: Individual nesting; communal roosting; individual
+and group food finding
+
+Special trait(s): Giant of the coast. The California Condor is one of the largest flying birds in
+                  the world, with a wingspan up to 3 meters (10 feet) across – wider than a person
+                  is tall. Those huge wings let it glide for hundreds of kilometers, effortlessly
+                  riding thermal updrafts as it scans for food. In ecology, this condor fills the
+                  role of a megascavenger: it can dine on gigantic carcasses that smaller vultures
+                  can’t tackle, historically including beached whales and even salmon runs. With
+                  its powerful build and endurance, it will travel from mountaintop to seashore in
+                  search of the next feast, soaring all day without flapping. Unlike more gregarious
+                  vultures, California Condors are relatively few and far between – they live long
+                  (up to 60 years!) and raise young slowly, which made their population vulnerable
+                  when threats like lead poisoning emerged.
+
+Designed prompt: In pixel art, a California Condor character could be shown with outstretched wings
+                 and a fish in its beak to hint at its historic diet of marine carcasses.
+
+
+-> Andean Condor Vultur gryphus
+
+Spanish: Cóndor Andino
+German: Andenkondor
+French: Condor de Andes
+Taxonomy: Family Cathartidae
+Size: Length 40–51 in (100–130 cm); wingspan >126 in (>320 cm);
+18–33 lb (8–15 kg)
+Estimated world population: <15,000; decreasing
+Movements: Sedentary; occasionally nomadic and migratory
+Social ecology: Individual nesting; communal roosting; individual
+and group food finding
+
+Special trait(s): Lord of the Andes winds. The Andean Condor rides the mountain gusts of South America
+                  with incredible skill – a recent study showed it can fly for hours without flapping,
+                  simply gliding on air currents as if it were a living airplane. This vulture is huge
+                  and heavy (males can top 15 kg), yet it conserves energy so well that it scarcely needs
+                  to flap its 10-foot wings except during takeoff. In the wild, an Andean Condor can
+                  cover vast distances across the Andes in search of llamas, deer, or cattle carcasses.
+                  Uniquely, this species shows reverse sexual size dimorphism – the male condors are bigger
+                  than the females (opposite of most birds of prey) and sport a noticeable fleshy comb on
+                  their heads. This means in condor society, Dad is not only a bit flashier but can also
+                  push his weight around at carcasses, often eating first. Males have a distinct crest and
+                  wattle, whereas females don’t, making pairs look quite “mismatched” – a peculiar trait
+                  among vultures.
+
+Designed prompt: To represent the Andean Condor in pixel form, we could illustrate a majestic chibi
+                 condor maybe with little wind swirls to show it surfing the breeze.
+
+-------------------------------------------------------------------------------
+
+2. Old World
+
+-> Palm-nut Vulture Gypohierax angolensis
+
+Spanish: Buitre Palmero
+German: Palmgeier
+French: Palmiste Africain
+aka: Vulturine Fish-eagle
+Taxonomy: Subfamily Gypaetinae
+Size: Length 22–26 in (57–65 cm); wingspan 69–83 in (175–210 cm);
+2.6–4 lb (1200–1800 g)
+Estimated world population: 240,000; stable
+Movements: Sedentary
+Social ecology: Often gregarious; individual nesting; communal
+roosting; both individual and group food finding
+
+Special trait(s): The vegetarian vulture. Unlike its meat-loving cousins, the Palm-Nut Vulture thrives
+                  on a diet of fruits and veggies – specifically the oily fruit of palm trees for much
+                  of the year. In fact, this African vulture is so hooked on palm nuts that it behaves
+                  more like a strange fruit-eating hawk than a typical scavenger. It will sit in palm
+                  trees and feast on the fleshy palm fruits, obtaining plenty of energy without ever
+                  touching a carcass. Of course, it still snacks on the occasional fish or crab and will
+                  eat carrion opportunistically, but it’s the only vulture that could literally be friends
+                  with a vegetarian. This dietary quirk sets it apart from all 22 other vulture species!
+                  Additionally, Palm-Nut Vultures have an eagle-like appearance – adults are crisp white
+                  with black wing patches, and they perch upright rather than hunching, looking quite dapper.
+                  Ecologically, their fruit habit means they can live in coastal mangroves and wetlands where
+                  carcasses are scarce but palm trees are abundant, carving out a niche all their own.
+
+Designed prompt: A pixel-art Palm-Nut Vulture could play on this unique trait by showing a cute vulture
+                 holding a bright orange palm fruit.
+
+
+-> Bearded Vulture Gypaetus barbatus
+
+Spanish: Quebrantahuesos
+German: Bartgeier
+French: Gypaète barbu
+aka: Lammergeier
+Taxonomy: Subfamily Gypaetinae
+Size: Length 37–49 in (94–125 cm); wingspan 91–112 in (230–
+285 cm); 10–16 lb (4800–7200 g)
+Estimated world population: <30,000; recent rapid decline
+Movements: Sedentary; immatures sometimes wide-ranging and
+nomadic
+Social ecology: Solitary; territorial nesting; individual and group
+food finding
+
+Special trait(s): Bone-cracker extraordinaire. The Bearded Vulture (also called Lammergeier) has a diet
+                  and behavior straight out of a fantasy story: it eats bones – and dyes its feathers
+                  orange for style! Up to 90% of this vulture’s diet is bone material. It will carry large
+                  bones high into the air and drop them onto rocks to shatter them into bite-sized bits.
+                  This bone-dropping habit is unique among living vultures (and really all vertebrates)
+                  – it’s like having a built-in nutcracker for skeletons. By accessing the nutritious marrow
+                  inside bones, the Bearded Vulture fills an important niche, cleaning up the last scraps
+                  that other scavengers leave behind. To digest this calcium-rich diet, it has super acidic
+                  stomach juices and an elastic throat to swallow sizable chunks. As if that weren’t distinctive
+                  enough, adult Bearded Vultures deliberately stain their whitish feathers a rusty orange by
+                  bathing in iron-rich mud, giving them a fiery “beard” and body hue. This cosmetic behavior
+                  doesn’t occur in other vultures – it’s believed they do it to appear more formidable or attractive.
+                  In comparison to other vultures, they also have a fully feathered face with a little black “goatee”
+                  tuft, which gives them a bearded appearance.
+
+Designed prompt: For a chibi pixel design, imagine a Bearded Vulture proudly clutching a big bone
+                 or posing besides a skull.
+
+
+-> Egyptian Vulture Neophron percnopterus
+
+Spanish: Alimoche Común
+German: Schmutzgeier
+French: Vautour percnoptère
+aka: Scavenger Vulture, Pharaoh’s Chicken
+Taxonomy: Subfamily Gypaetinae
+Size: Length 21–26 in (54–66 cm); wingspan 57–69 in (145–175 cm);
+3.5–5.3 lb (1585–2400 g)
+Estimated world population: <10,000; recent declines
+Movements: Partial migrant; immatures nomadic
+Social ecology: Largely gregarious; sometimes nests in loose colo-
+nies; communal roosting; group food finding
+
+Special trait(s): Tool-user and dung gourmet. The small Egyptian Vulture is one clever scavenger – it famously
+                  uses tools, a rarity in birds. When it encounters a large egg (like an ostrich egg), too tough
+                  to break by beak, it will pick up a stone in its bill and hurl it at the egg to crack it open.
+                  This smart “egg-smashing” trick sets it apart from virtually all other raptors and earned it the
+                  nickname “Pharaoh’s Chicken” in some cultures. In the vulture world, only the Egyptian (and a few
+                  distant cousins like Hooded Vultures on smaller eggs) are known to wield rocks as tools, showing
+                  a surprising bit of avian ingenuity. Another quirky trait: Egyptian Vultures aren’t above eating
+                  dung – yes, they will happily sift through animal poop, especially of ungulates (like cows or
+                  elephants), to pick out nutritious bits and carotenoid pigments. This habit gives them nutrients
+                  and also turns their faces a brighter yellow-orange (a cosmetic boost from beta-carotenes in dung!).
+                  Other vultures usually avoid digestive leftovers, but the Egyptian makes a living in part by being
+                  Mother Nature’s sanitizer in this way.
+
+Designed prompt: To illustrate these traits in a playful pixel character, we could have an Egyptian Vulture holding
+                 a little stone next to a giant egg, cartoon cracks appearing in the egg to show what it’s up to.
+                 The character might wear a determined expression as it “aims” its rock. Alternatively, it could be
+                 drawn with a comical oversized spoon and a poop emoji in a bowl (a lighthearted nod to its dung dining)
+                 – though done in a cute, non-gross style (perhaps the vulture giving a cheeky grin).
+
+
+-> Hooded Vulture Necrosyrtes monachus
+
+Spanish: Alimoche Sombrío
+German: Kappengeier
+French: Vautour charognod
+Taxonomy: Subfamily Aegypiinae
+Size: Length 21–26 in (54–66 cm); wingspan 59–71 in (150–180 cm);
+3.0–5.7 lb (1400–2600 g).
+Estimated world population: <200,000; decreasing
+Movements: Sedentary; adults largely sedentary; immatures episod-
+ically nomadic
+Social ecology: Solitary to gregarious; solitary and loose colonial
+nesting; solitary and communal roosting; individual and group
+food finding.
+
+Special trait(s): Little garbage collector. The Hooded Vulture is a small, thin-beaked African vulture with a big
+                  ecological role: it acts like a vacuum cleaner for leftovers. While larger vultures tear into
+                  carcasses, the Hooded Vulture patiently waits on the sidelines and then moves in to pick up tiny
+                  scraps, gristle, and even maggots that others leave behind. Its slender bill is perfect for nabbing
+                  morsels from nooks and crannies, much like a pair of tweezers. This makes it different from big
+                  fellows like White-backed or Lappet-faced Vultures, which go for large chunks – the Hooded specializes
+                  in the bite-sized bits. It often hangs around human settlements too, becoming an urban scavenger that
+                  cleans up abattoir waste, street garbage, and even excrement (earning it nicknames like “garbage vulture”).
+                  In parts of West Africa, Hooded Vultures are the most common vulture in towns, trotting around markets
+                  and slaughterhouses looking for discarded meat or fish scraps. They’re so opportunistic that they’ve been
+                  seen using stones to crack open smaller bird eggs, a mini version of the Egyptian Vulture’s tool use.
+                  They’re also bold around predators – not as easily spooked by lions or hyenas – because they know those
+                  giants provide dinner leftovers.
+
+Designed prompt: For a pixel-art portrayal, a Hooded Vulture chibi could be depicted rummaging through a tiny garbage can
+                 or with a banana peel on its head, or holding a broom and dustpan as if “sweeping” up scraps.
+
+
+-> Indian Vulture Gyps indicus
+
+Spanish: Buitre indio
+German: Indiengeier
+French: Vautour indien
+aka: Long-billed Vulture
+Taxonomy: Subfamily Aegypiinae
+Size: Length 32–41 in (81–103 cm); wingspan 77–102 in (196–
+258 cm); 12–14 lb (5500–6300 g)
+Estimated world population: <30,000; recent rapid decline
+Movements: Sedentary; immatures somewhat nomadic
+Social ecology: Gregarious; communal nesting and roosting; group
+food finding
+
+Special trait(s): Cliff dweller of the east. The Indian Vulture – also known as the Long-billed Vulture – has a
+                  distinctive lifestyle among its Gyps vulture cousins in Asia: it prefers to nest on cliffs and
+                  tall buildings rather than in trees. This species historically formed colonies on remote crags
+                  or the ledges of ruins, overlooking villages where they would soar out to clean up livestock
+                  carcasses. In ecology, their cliffside habit meant they often lived near human habitations (in
+                  semi-arid regions of India and Pakistan) and played a major role as sanitation workers. Compared
+                  to tree-nesting White-rumped Vultures or Slender-billed Vultures, the Indian Vulture’s choice of
+                  high perches gave it a safe zone away from ground predators and a broad vantage point to spot food.
+                  It also has a stouter bill and neck than the Slender-billed Vulture, indicating it was adapted to
+                  rip into carcasses a bit earlier in the “feast” (soft parts and moderate hide) – the slender-billed
+                  would then reach the narrower crevices. Sadly, this vulture became famous for a negative reason: it
+                  was one of the three species nearly wiped out by veterinary drug poisoning in the 1990s, which is not
+                  a “trait” per se, but it does highlight how unique their role was – when they declined, towns were
+                  suddenly littered with rotting carcasses.
+
+Designed prompt: In a creative pixel art piece, we could show an Indian Vulture looking proud and vigilant, as if surveying
+                 its kingdom from on high – a nod to its status as a once super-common vulture that literally lived above
+                 everyone, doing essential cleanup.
+
+
+-> Slender-billed Vulture Gyps tenuirostris
+
+Spanish: Buitre picofino
+German: Dünnschnabelgeier
+French: Vautour á long bec
+Taxonomy: Subfamily Aegypiinae
+Size: Length 30–40 in (77–103 cm); wingspan 77–102 in (196–258) cm;
+mass, no data
+Estimated world population: <2,500; declining
+Movements: Largely sedentary; immatures sometimes nomadic
+Social ecology: Solitary to highly gregarious; solitary and loose colo-
+nial nesting; communal roosting; individual and group food
+finding
+
+Special trait(s): Needle-nosed scavenger. True to its name, this vulture has an exceptionally slender, long beak and
+                  neck, which give it a distinct silhouette. That adaptation isn’t just for show – it allows the
+                  Slender-Billed Vulture to reach deep inside carcasses and pick at soft organs that thicker-billed
+                  vultures have trouble accessing. Essentially, it’s the specialist for getting the last shreds of meat
+                  from between ribs and vertebrae, acting like nature’s toothpick. This sets it apart from its close cousin
+                  the Indian Vulture, which has a bulkier bill better suited for general tearing. The Slender-Billed Vulture
+                  also had a slightly different lifestyle: it is a tree-nester in lowland forests and wetland areas, often
+                  building solitary nests high in tall trees, whereas the Indian Vulture prefers cliffs. This difference means
+                  the Slender-Billed was more of a rural wetland resident, sometimes in small loose colonies along rivers, in
+                  contrast to the more urban or cliffside Indian Vulture. Behaviorally, both species were friends with people
+                  (often found near villages eating cattle carcasses), but the Slender-Billed’s extreme bill suggests it might
+                  have been the one to clean up the deep stuff after Indian and White-rumped Vultures took the easy pickings.
+
+Designed prompt: In pixel art form, a Slender-Billed Vulture character could exaggerate that skinny beak to comic effect –
+                 perhaps a tiny-headed, long-beaked chibi vulture or have it use its beak as a straw or chopstick in a bowl
+                 of “soup” (representing gooey carrion soup!) to highlight how it can slurp up things out of reach for others.
+
+
+-> White-rumped Vulture Gyps bengalensis
+
+Spanish: Buitre Dorsiblanco Bengali
+German: Bengalengeier
+French: Vautour chaugoun
+Taxonomy: Subfamily Aegypiinae
+Size: Length 30–34 in (75–85 cm); wingspan 76–84 in (192–213 cm);
+8–13 lb (3500–5700 g)
+Estimated world population: <10,000; recent declines
+Movements: Largely sedentary; immatures sometimes nomadic
+Social ecology: Largely gregarious; loose communal nesting and
+communal roosting; group food finding
+
+Special trait(s): Once in a million (or rather, millions). The White-Rumped Vulture holds the bittersweet title of possibly
+                  once being the most abundant large bird of prey in the world. Until the 1980s, it was extremely common across
+                  South Asia – soaring in huge flocks and nesting in big colonies, sometimes with dozens of nests in a single
+                  tree. This hyper-social behavior is a distinctive trait: White-Rumped Vultures would gather by the hundreds
+                  at a carcass, efficiently stripping a cow to bare bones within minutes. Their communal approach (a true “vulture
+                  party”) meant that they outnumbered and out-competed many other scavengers in their range. Ecologically, they
+                  were the cleanup crew for both cities and countryside, thriving alongside human society. Their name comes from
+                  a conspicuous white patch of feathers above the tail, which flashes when they are in flight or squabbling – a
+                  visual signal to others in the flock. Compared to African vultures, these guys were smaller but far more numerous,
+                  forming the backbone of South Asia’s scavenging system. Tragically, a rapid poisoning event crashed their population
+                  by >95%, but conservation efforts are ongoing to bring this remarkable species back.
+
+Designed prompt: In designing a playful pixel tribute, one could draw a smiling chibi White-Rumped Vulture and emphasize the white rump.
+
+
+-> Griffon Vulture Gyps fulvus
+
+Spanish: Buitre Leonardo
+German: Gänsegeier
+French: Vautour fauve
+Taxonomy: Subfamily Aegypiinae
+Size: Length 37–43 in (93–110 cm); wingspan 53–106 (135–270 cm);
+14–25 lb (6200–11,300 g)
+Estimated world population: 650,000–690,000; increasing overall
+Movements: Sedentary; adults largely sedentary; immatures nomadic-
+migratory
+Social ecology: Solitary to gregarious; communal nesting and roost-
+ing; individual and group food finding
+
+Special trait(s): High flyer and herd follower. The Griffon Vulture is a big, buff-colored vulture of Europe and Asia, known
+                  for its impressive migratory journeys. What stands out about Griffon Vultures is how they follow herds and
+                  human pastoralists in a very strategic way. In Europe, flocks of Griffons will track traditional livestock
+                  movements – for example, shepherds moving flocks to mountain pastures – and the vultures soar overhead, ready
+                  to clean up any animals that die along the route. This ancient practice of transhumance created a partnership:
+                  the vultures get a regular food supply, and the herders get free disposal of carcasses. No wonder Griffons
+                  developed strong soaring and navigation skills, crossing mountain ranges like the Pyrenees or Himalayas
+                  seasonally. They also congregate at famous migration bottlenecks (like the Rock of Gibraltar) in large numbers
+                  each year, showing a social, migratory side not all vultures have. With a wingspan around 2.5 meters, they can
+                  ride thermals to great heights (though not quite Rüppell’s height record) and travel far. Once nearly in trouble,
+                  Griffon Vultures have rebounded in some areas thanks to protections, making them a rare vulture conservation
+                  success story.
+
+Designed prompt: For a pixel-art depiction, imagine a Griffon Vulture with a little knapsack or map, looking like a traveler.
+                 We could show it with a cow or sheep emoji in its thought bubble, hinting at its habit of tailing herds.
+
+
+-> Rüppell’s Vulture Gyps rueppellii
+
+Spanish: Buitre Moteado
+German: Sperbergeier
+French: Vautour de Rüppell
+Taxonomy: Subfamily Aegypiinae
+Size: Length 33–38 in (85–97 cm); wingspan 89–100 (226–255 cm);
+15–20 lb (6800–9000 g)
+Estimated world population: <22,000; declining in portions of its
+range
+Movements: A largely sedentary but wide-ranging sometimes par-
+tial migrant
+Social ecology: Gregarious; communal nesting and roosting; group
+food finding
+
+Special trait(s): The Everest flier. Rüppell’s Vulture holds the astonishing record for the highest confirmed flight of any
+                  bird, having been spotted (unfortunately, colliding with an airplane) at 37,000 feet above sea level. That’s
+                  higher than Mount Everest’s peak! This African vulture has special hemoglobin in its blood that allows it to
+                  absorb oxygen even in the thin air at extreme altitudes, a critical adaptation for soaring above the Serengeti
+                  in search of the next meal. By flying so high, Rüppell’s Vultures can spot carcasses from miles away and then
+                  swoop down before other scavengers even know what’s happening. They often feed alongside White-backed Vultures,
+                  but Rüppell’s are a bit larger and can arrive slightly later to a carcass (since they scan from higher up).
+                  However, they also rely on their excellent eyesight and social foraging – they’ll join big “kettles” of vultures
+                  spiraling up on thermals. This species is clad in striking checkered plumage and a neat white ruff, making it
+                  look like it’s wearing a speckled shawl.
+
+Designed prompt: To show off Rüppell’s sky-high habit in pixel art, we could create a chibi Rüppell’s Vulture wearing vintage
+                 aviator goggles and a scarf fluttering in the wind – like a tiny pilot.
+
+
+-> Himalayan Vulture Gyps himalayensis
+
+Spanish: Buitre del Himalaya
+German: Schneegeier
+French: Vautour de l’Himalaya
+Taxonomy: Subfamily Aegypiinae
+Size: Length 33–38 in (85–97 cm); wingspan 89–100in (226–255 cm);
+17.6–26.4 lb (8000–12000 g)
+Estimated world population: <35,000; possibly decreasing
+Movements: Largely sedentary; sometime altitudinal migrant
+Social ecology: Small colony nesting, communal and individual
+roosting, individual and group food finding
+
+Special trait(s): Mountain monk. The Himalayan Vulture is a giant of the peaks, often seen circling among the world’s tallest
+                  mountains. It’s one of the largest Old World vultures, with a massive wingspan and thick fluffy down to keep
+                  it warm in the thin, chilly air of the Himalayas. This species’ lifestyle is unique: it feeds on dead livestock
+                  and wildlife in remote high-altitude meadows and along cliffs, and it has even become part of the region’s cultural
+                  fabric through sky burials. In parts of Tibet and Nepal, when people perform sky burials (exposing human bodies
+                  for scavengers), Himalayan Vultures are among the birds that come to consume the remains. In doing so, they perform
+                  a sacred service, “releasing” the soul by cleaning up the body – a role no other vulture plays so directly in human
+                  ritual. Ecologically, they dominate smaller vultures in their range (like beating out any White-rumped Vulture that
+                  wanders up high), though they defer to the even larger Cinereous Vulture when their ranges overlap. They often move
+                  seasonally up and down mountains (soaring over 7,000 m passes) following food availability.
+
+Designed prompt: For a Himalayan Vulture pixel character, one could lean into a gentle smile, conveying a wise or zen personality.
+                 To hint at its diet, a small yak skull or bone could lie at its side.
+
+
+-> White-backed Vulture Gyps africanus
+
+Spanish: Buitre Dorsiblanco Africano
+German: Weißrückengeier
+French: Vautour African
+Taxonomy: Subfamily Aegypiinae
+Size: Length 31–35 in (78–90 cm); wingspan 78–90 in (197–229 cm);
+9.2–15.8 lb (4200–7200 g)
+Estimated world population: 270,000; severe declines
+Movements: Largely sedentary; immatures sometimes nomadic
+Social ecology: Solitary to highly gregarious; communal roosting;
+solitary and loose colonial nesting; individual and group food
+finding
+
+Special trait(s): Savanna team player. The African White-Backed Vulture is the smallest of Africa’s vultures, but it more than
+                  makes up for size with sheer numbers and enthusiasm. These vultures are the classic “swarm” that descends on
+                  a carcass in the savanna – arriving sometimes within minutes of a zebra or wildebeest dying. They use each
+                  other as lookouts: once one finds a meal, many others follow quickly (a big social network in the sky). With
+                  their relatively light build and agile flight, White-Backeds specialize in devouring the soft guts and organs
+                  of carcasses. They dive right in to tug out intestines and other squishy bits, which are easier for them to
+                  swallow compared to tougher hide or bones. In fact, these vultures often leave the skin and sinew for larger
+                  species like the Lappet-faced Vulture to clean up later. In ecological terms, they are the quick cleanup crew
+                  that clears the bulk of the meat rapidly, helping to prevent disease spread. They nest in trees, often building
+                  loose colonies where multiple nests might dot the same acacia grove. And when not breeding, they roost in large
+                  groups too – it’s all about cooperation and numbers with this species.
+
+Designed prompt: To capture the White-Backed Vulture’s spirit in pixel art, one idea is to illustrate one chibi vulture wearing a
+                 backpack or team jersey to symbolize being a team player (a pun on “back-pack” for white-“backed”!).
+
+
+-> Cape Vulture Gyps coprotheres
+
+Spanish: Buitre de El Cabo
+German: Kapgeier British
+French: Vautour chassefiente
+Taxonomy: Subfamily Aegypiinae
+Size: Length 37–41 in (95–105 cm); wingspan 90–98 in (228–250 cm);
+16–24 lb (7100–10,900 g)
+Estimated world population: <10,000; declining
+Movements: Adults largely sedentary; juveniles sometimes nomadic
+Social ecology: Colonial nesting; communal nesting and roosting;
+group food finding
+
+Special trait(s): Cliff colonist. The Cape Vulture, native to southern Africa, is notable for its immense breeding colonies on
+                  cliffs – sometimes over 600 pairs nesting side by side on narrow ledges. Imagine a whole cliff face speckled
+                  with big nesting birds; it’s quite the sight and truly unique to this species (most vultures don’t nest in
+                  such huge, dense groups). This colonial life means Cape Vultures are very social and communicate constantly –
+                  squabbling over space, greeting their mates, and synchronizing their daily foraging forays. They are also among
+                  the heaviest of the Gyps vultures, with powerful broad wings to carry them over the Drakensberg mountains and
+                  beyond. Cape Vultures often forage in groups and tend to stay within about 40–60 km of their colony when raising
+                  chicks, which is relatively local compared to wandering species – they have a hometown and they stick to it,
+                  relying on communal knowledge of the landscape. Interestingly, their scientific name coprotheres means “dung
+                  hunter,” owing to an old misconception – while they’ve been seen at animal dung (possibly eating bone fragments
+                  or insects in it), they don’t actually eat poop as a primary food like an Egyptian Vulture does. They prefer good
+                  old meat, especially from domestic livestock carcasses. Because of their size, they can bully smaller vultures
+                  aside, though they yield to the top-dog Lappet-faced Vulture in disputes.
+
+Designed prompt: For a pixel art concept, a Cape Vulture character could be shown wearing a little safety helmet or miner’s hat
+                 (a playful nod to living on a rocky ledge) to accentuate the cliff theme.
+
+
+-> Red-headed Vulture Sarcogyps calvus
+
+Spanish: Buitre Cabecirrojo
+German: Kahlkopfgeier
+French: Vautour royal
+aka: King Vulture, Pondicherry Vulture
+Taxonomy: Subfamily Aegypiinae
+Size: Length 30–34 in (76–86 cm); wingspan 79–89 in (200–225 cm);
+8.0–12.0 lb (3700–5400 g)
+Estimated world population: <15,000; declining in parts of range
+Movements: Largely sedentary, but sometimes wide-ranging
+Social ecology: Largely solitary; territorial nesting and roosting;
+group food finding
+
+Special trait(s): The solitary sentry. The Red-Headed Vulture – sometimes called the Asian King Vulture – breaks the vulture
+                  mold by leading a mostly solitary, territorial life. Instead of flocking, this species lives in isolated
+                  pairs that guard a large territory, much like hawks or eagles do. In the days when they were more common
+                  across India and Southeast Asia, you’d usually see just one or two Red-Headed Vultures at a carcass, not a
+                  crowd. They often show up early in the morning, scouting for small carcasses or leftovers before the gang of
+                  bigger Gyps vultures arrive. This early-bird habit is possible because Red-Headeds (and their African counterpart,
+                  the White-headed Vulture) have relatively low wing loading and can take off in cooler air – so they wake up and
+                  get to work sooner. Physically, they are immediately recognizable by their bright, bald red head and floppy skin
+                  folds on the sides of their neck (the “lappets”). Their body is mostly black with gleaming white thighs, making
+                  them look rather elegant in a stark way. The red bare head can flush an even deeper red when they’re excited or
+                  agitated, which is a signal others can probably see – no other Asian vulture has such a striking color change
+                  feature. Functionally, their strong beak lets them open moderately tough hides, so they often could start on a
+                  carcass that smaller scavengers (like crows or jackals) couldn’t rip into, but they’d then be pushed aside by the
+                  larger vultures when those arrived.
+
+Designed prompt: In pixel art, we can play up the “lonely guardian” aspect: perhaps depict a chibi Red-Headed Vulture wearing a
+                 tiny pair of binoculars to indicate it’s always watching its territory for food intruders.
+
+
+-> White-headed Vulture Aegypius occipitalis
+
+Spanish: Buitre Cabeciblanco
+German: Wollkopfgeier
+French: Vautour à tête blanche
+Taxonomy: Subfamily Aegypiinae
+Size: Length 28–32 in (72–82 cm); wingspan 80–89 in (205–225 cm);
+7.0–12.0 lb (3300–5300 g)
+Estimated world population: <6,000; decreasing
+Movements: Sedentary; immatures more nomadic
+Social ecology: Solitary, territorial nesting; individual and group
+food finding
+
+Special trait(s): Eagle in vulture’s clothing. The White-Headed Vulture of Africa is often described as having more “raptor-like”
+                  behaviors than other vultures. It is frequently seen hunting small animals – picking off lizards, small mammals,
+                  or bird eggs when it can – in addition to scavenging. In fact, its field of vision is more like a hawk’s, with
+                  binocular focus straight ahead, which helps in hunting live prey. This predatory tendency is quite distinct; most
+                  vultures strictly stick to carrion. Like the Red-Headed Vulture, the White-Headed is also a territorial solitary
+                  nester, with pairs defending huge territories and nesting in tall trees apart from other vultures. They are often
+                  the first to locate carcasses in the morning because they can fly in weaker thermal currents (thanks to relatively
+                  big wing surface for their weight). Once they find something, they might start feeding, but interestingly, they
+                  don’t like big vulture crowds – if a swarm of African White-Backed Vultures shows up, the White-Headed will often
+                  pull back (they’re somewhat timid in the scrum). They’ll return later when the frenzy dies down to pick at the
+                  remains, especially enjoying the tougher bits like tendons and skin that are left. Visually, this vulture has a
+                  striking white fluffy head (hence the name) with a rosy-pink face and blue eyeshadow-like patches – almost like
+                  it’s wearing makeup. Its wings and body are a mix of black, chestnut, and white, giving it a “dressed-up” look
+                  more colorful than many vultures.
+
+Designed prompt: For a pixel portrayal, imagine a White-Headed Vulture as a cute sentry or scout, maybe saluting or hand over brow
+                 as if scanning the horizon. Because of its semi-predatory nature, we could give it a tiny spear or net – something
+                 playful to imply it might catch its own dinner.
+
+
+-> Cinereous Vulture Aegypius monachus
+
+Spanish: Buitre Negro
+German: Mönchsgeier
+French: Vautour moine
+aka: Black Vulture, Monk Vulture
+Taxonomy: Subfamily Aegypiinae
+Size: Length 39–47 in (100–120 cm); wingspan 98–116 in (250–
+295 cm); 15–25 lb (7000–11,500 g)
+Estimated world population: <32,000; decreasing
+Movements: Partial migrant
+Social ecology: Solitary nesting; communal roosting; individual
+and group food finding
+
+Special trait(s): The black giant. Also known as the Eurasian Black Vulture, this is one of the largest vultures on the planet,
+                  and it acts like it. With a 3-meter wingspan and a formidable build, the Cinereous Vulture is often an apex
+                  scavenger in its range – others typically give way when this big dark shadow arrives. Uniquely, it’s been known
+                  to kill small animals outright if the opportunity arises. Rabbits, young lambs, even unwary fox pups – this
+                  vulture’s powerful bill and strength mean it blurs the line between pure scavenger and occasional predator.
+                  That’s a rare trait; most vultures don’t actively hunt except for the odd insect or so, whereas a hungry “Monk
+                  Vulture” (so-called for its hood of dark feathers) might swoop on live prey in a very un-vulture-like manner.
+                  In terms of feeding ecology, it can tear through the toughest hides and even crunch through smaller bones –
+                  tasks that smaller vultures leave behind. In fact, a Cinereous Vulture in a group can monopolize a carcass simply
+                  by virtue of size and aggression, similar to how a Lappet-faced Vulture rules in Africa. Unlike the social Griffons,
+                  Cinereous Vultures are more loners or in pairs; they nest singly in big stick nests in trees or cliff ledges and
+                  don’t form large colonies. This solitary, heavyweight lifestyle is quite distinct.
+
+Designed prompt: To illustrate the Cinereous Vulture in pixel form, one could lean into its “monk” persona: a chibi vulture dressed
+                 in a tiny black robe with a hood, maybe holding a book or staff, giving it a wise hermit vibe (a fun play on its
+                 Latin name).
+
+
+-> Lappet-faced Vulture Aegypius tracheliotos
+
+SSpanish: Buitre Orejudo
+German: Ohrengeier
+French: Vautour oricou
+aka: King Vulture, Nubian Vulture, Eared Vulture, Sociable Vulture
+Taxonomy: Subfamily Aegypiinae
+Size: Length 37–45 in (95–115 cm); wingspan 98–114 in (250–290 cm);
+12–21 lb (5400–9400 g)
+Estimated world population: <10,000; declining
+Movements: Largely sedentary; juveniles and subadults nomadic
+Social ecology: Relatively solitary, territorial breeding; communal
+roosting; individual and group food finding
+
+Special trait(s): The carcass kingpin. The Lappet-Faced Vulture is the alpha vulture of Africa, armed with a monster beak and
+                  intimidating size. It gets its name from the floppy folds of skin (lappets) on its neck and face, which flush
+                  pink and may help radiate heat – but those lappets also give it a permanent “frowny bulldog” expression. This
+                  species’ standout trait is its sheer power in feeding: it can rip through the tough hide of large carcasses and
+                  even crack open bones to get at marrow and brains. In African savannas, a dead elephant or giraffe with thick
+                  skin would be nearly impenetrable to smaller vultures; enter the Lappet-faced Vulture, which acts like nature’s
+                  can opener and hammer combined. Thanks to its massively strong bill, it tears off skin and tendons that others
+                  can’t handle, often opening carcasses for all the other scavengers to dine. In doing so, it ensures nothing goes
+                  to waste – even hide and large bones eventually get processed. Behaviorally, Lappet-faceds are feisty and assertive.
+                  They are usually first or among the first at a carcass, and they won’t hesitate to chase off smaller vultures;
+                  they’ve even been seen scaring off jackals. They are the most likely to engage in fights, using their size to
+                  dominate a feeding site. Interestingly though, they can be a bit cautious about landing when a carcass is surrounded
+                  by too many rivals – they often circle and wait until they’re sure they can assert control. If there’s just a couple
+                  of White-backs around, a Lappet-faced will land and they’ll scatter; but if 50 White-backs are in a frenzy, the big
+                  guy might hold off until the chaos calms (after all, even a king doesn’t dive into a mob recklessly). Lappet-faceds
+                  also have a varied diet – they’ll take flamingo eggs or flamingo chicks from nests, and catch locusts or termites
+                  during swarms, showing a surprising versatility for such a large bird.
+
+Designed prompt: For pixel art, the Lappet-Faced Vulture can be a fun “tough guy” character. Picture a chibi vulture with big, cute
+                 jowls or lappet flaps and a tiny angry eyebrow line (for comedic effect). It could hold a cartoon can opener tool
+                 or a bone it just snapped, proclaiming its strength.
+
+
+-------------------------------------------------------------------------------
+
+SYNTHESIS AND CONCLUSIONS
+
+1. Reproduction is an essential aspect of the biology of scavenging
+   birds of prey. Without it there would be no next generation, and
+   extinction would follow.
+2. Vultures breed seasonally, especially in response to carcass and
+   updraft availability.
+3. Excepting several larger and often more predatory species in
+   which females are notably more massive than their male counterparts,
+   males and females differ little in body mass, except for Andean Condors,
+   in which males are larger than females. The Bearded Vulture, a species
+   in which siblicide occurs, also exhibits reversed sexual size dimorphism,
+   that is, the females are larger.
+4. Almost all vultures and condors delay maturity, most likely
+   because it takes multiple years to develop carcass-searching and
+   territorial skills necessary for successful breeding.
+5. Multi-year pair fidelity is typical in scavenging raptors. Extra-pair
+   copulations do occur, as does within-year mate switching.
+6. Territoriality occurs in some, but not all, vultures.
+7. Breeding success, which varies with food availability, weather, and
+   predation, appears to be high in many species, although this may
+   be so because it has been studied in areas with relatively dense
+   and, presumably highly successful, populations.
+8. Carrion is neither as scarce nor as unpredictable as many scien-
+   tists suggest, and vultures are well adapted to secure it.
+9. Exclusive carrion diets have both costs and benefits. Carcasses
+   are digestible and nutritious, but many are potentially infec-
+   tious, toxic, or both.
+10. Agricultural practices serve to increase the foraging efficiencies of
+    vultures by concentrating nutritional resources in space and time.
+11. Many vultures are direct or indirect human commensals that ben-
+    efit and are benefited by living in human-dominated landscapes.
+12. Vultures require and use low-cost, non-flapping, soaring flight
+    to fly long distances when engaged in low-cost searching flight.
+13. All vultures use sight while searching for carrion. A few species
+    also use smell and possibly sound to locate carrion and other
+    nutritional resources.
+14. Social facilitation resulting from both single and multi-species
+    aerial information networks makes it possible for vultures to fol-
+    low one another to carrion, which is an essential component of
+    effective food finding in vultures.
+15. Social facilitation also results in large assemblages of hungry
+    vultures at carrion, which typically creates considerable intra-
+    and interspecies competition.
+16. Behavioral competition among vultures at feeding sites is both
+    kinetic and complex, and aggressive interactions can be intense.
+17. Larger species behaviorally dominate smaller species at feeding
+    sites, but conspecific groups or gangs of smaller vultures can
+    outcompete larger species.
+18. Vultures are sometimes, but not typically, cannibalistic.
+19. Vultures sometimes approach and hasten the demise of a dying
+    animal, which they then feed upon even while it is still alive.
+
+
+-------------------------------------------------------------------------------
+
+GENERATED VULTURES
+
+Black Vulture: assets/vltrs/bv.png
+Turkey Vulture: assets/vltrs/tv.png
+Lesser Yellow-headed Vulture: assets/vltrs/lyhv.png
+Greater Yellow-headed Vulture: assets/vltrs/gyhv.png
+King Vulture: assets/vltrs/kv.png
+California Condor: assets/vltrs/cc.png
+Andean Condor: assets/vltrs/ac.png
+Palm-nut Vulture: assets/vltrs/pnv.png
+Bearded Vulture: assets/vltrs/bdv.png
+Egyptian Vulture: assets/vltrs/ev.png
+Hooded Vulture: assets/vltrs/hv.png
+Indian Vulture: assets/vltrs/iv.png
+Slender-billed Vulture: assets/vltrs/sbv.png
+White-rumped Vulture: assets/vltrs/wrv.png
+Griffon Vulture: assets/vltrs/gv.png
+Rüppell’s Vulture: assets/vltrs/rv.png
+Himalayan Vulture: assets/vltrs/hlv.png
+White-backed Vulture: assets/vltrs/wbv.png
+Cape Vulture: assets/vltrs/cv.png
+Red-headed Vulture: assets/vltrs/rhv.png
+White-headed Vulture: assets/vltrs/whv.png
+Cinereous Vulture: assets/vltrs/crv.png
+Lappet-faced Vulture: assets/vltrs/lfv.png
+
+-------------------------------------------------------------------------------
+
+BACKGROUND
+
+Primary: assets/bg.png
+Fallback: css pattern
+
+-------------------------------------------------------------------------------
+
+COLORSCHEME/PALETTE
+
+High Heavens Palette -- by https://lospec.com/mirrutatep
+
+TEXT: #fcf1df
+ACCENT: #f0bfb2
+SECONDARY: #db80ac
+ACCENT2: #a85d8b
+BACKGROUND: #654c70
