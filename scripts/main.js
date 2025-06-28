@@ -8,7 +8,7 @@ const closeButton = document.querySelector(".close-button");
 const audioToggle = document.getElementById("toggleAudio");
 const bgMusic = document.getElementById("bgMusic");
 
-bgMusic.src = "/assets/audio/bgloop.wav";
+bgMusic.src = "assets/audio/bgloop.wav";
 bgMusic.loop = true;
 bgMusic.volume = 0.3;
 
@@ -160,7 +160,7 @@ function showVultureWisdom() {
       <button class="close-button">×</button>
       <div class="wisdom-content">
         <div class="wisdom-header">
-          <img src="/assets/vltrs/pv.png" alt="Professor Vulture" class="professor-img">
+          <img src="assets/vltrs/pv.png" alt="Professor Vulture" class="professor-img">
           <div class="professor-info">
             <h2>Professor Vulture</h2>
             <p class="professor-title">Vulture Studies Specialist</p>
