@@ -13,7 +13,7 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    background-image: url("assets/bg.png");
+    background-image: url("../assets/bg.png");
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
@@ -31,7 +31,7 @@ body::before {
     pointer-events: none;
 }
 
-@supports not (background-image: url("assets/bg.png")) {
+@supports not (background-image: url("../assets/bg.png")) {
     body {
         background-image: linear-gradient(
             to bottom right,
