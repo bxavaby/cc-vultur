@@ -2,7 +2,7 @@
 
 <img src="assets/vltrs/pv.png" alt="Professor Vulture" width="120">
 
-# Vulture Compendium
+# Vultur
 
 [![Live Demo](https://img.shields.io/badge/LIVE_DEMO-1a1a1a?style=for-the-badge&logoColor=f0bfb2&logo=github)](https://vultur.cc)
 [![MIT License](https://img.shields.io/badge/MIT-654c70?style=for-the-badge)](LICENSE)
